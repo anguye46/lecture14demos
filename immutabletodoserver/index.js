@@ -13,7 +13,7 @@ firebase.initializeApp({
 });
 var fireRef = firebase.database().ref('todos');
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 //Make a new one
 app.post('/todo', function (req, res) {

@@ -48,7 +48,9 @@
             this.bindAsArray(this.fireRef, "items");
         },
         removeItem: function (key) {
-            $.delete("http://localhost:3000/todo",{ key: key});
+            $.ajax({url: "http://localhost:3000/todo",
+                type: 'DELETE',
+                data: { key: key}});
         },
 
         handleAdd: function (e) {
